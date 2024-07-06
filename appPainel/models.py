@@ -513,7 +513,7 @@ class FontesMeta(models.Model):
     #ano = models.CharField(max_length=255, choices=ano_lista, verbose_name = _("Ano"))
         
     valor = MoneyField(
-        max_digits=11, decimal_places=2,
+        max_digits=12, decimal_places=2,
         validators=[validar_moeda],
         default_currency='BRL',
         verbose_name = _("Valor")
