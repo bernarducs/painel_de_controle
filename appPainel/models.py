@@ -540,8 +540,8 @@ class ProdutosMeta(models.Model):
     #ano = models.CharField(max_length=255, choices=ano_lista, verbose_name = _("Ano"))
     
     mes = models.CharField(max_length=255, choices=mes_lista, verbose_name = _("Mês"))
-    previsto = models.CharField(_("Previsto"), max_length=6, validators=[RegexValidator(r'^\d{1,10}$')])
-    realizado = models.CharField(_("Realizado"), max_length=6, validators=[RegexValidator(r'^\d{1,10}$')])
+    previsto = models.CharField(_("Previsto"), max_length=12, validators=[RegexValidator(r'^\d{1,12}$')])
+    realizado = models.CharField(_("Realizado"), max_length=12, validators=[RegexValidator(r'^\d{1,12}$')])
     history = HistoricalRecords()
 
     class Meta:
@@ -564,8 +564,8 @@ class ProdutosEtapa(models.Model):
     #ano = models.CharField(max_length=255, choices=ano_lista, verbose_name = _("Ano"))
     
     mes = models.CharField(max_length=255, choices=mes_lista, verbose_name = _("Mês"))
-    previsto = models.CharField(_("Previsto"), max_length=6, validators=[RegexValidator(r'^\d{1,10}$')])
-    realizado = models.CharField(_("Realizado"), max_length=6, validators=[RegexValidator(r'^\d{1,10}$')])
+    previsto = models.CharField(_("Previsto"), max_length=12, validators=[RegexValidator(r'^\d{1,12}$')])
+    realizado = models.CharField(_("Realizado"), max_length=12, validators=[RegexValidator(r'^\d{1,12}$')])
     history = HistoricalRecords()
 
     class Meta:
